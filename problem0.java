@@ -1,7 +1,12 @@
-//(https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)
-//Time: O(n)
-//Space: O(1) ignoring resultant arraylist of function
+/*
 
+Problem link: https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
+Time: O(n)
+Space: O(1) ignoring resultant arraylist of function
+
+
+
+*/
 
 
 class Solution {

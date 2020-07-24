@@ -1,6 +1,9 @@
-//https://leetcode.com/problems/find-all-duplicates-in-an-array/
-//Time: O(n)
-//Space: O(1)
+/*
+Problem Link: https://leetcode.com/problems/find-all-duplicates-in-an-array/
+Time: O(n)
+Space: O(1)
+
+*/
 
 class Solution {
     public List<Integer> findDuplicates(int[] nums) {
