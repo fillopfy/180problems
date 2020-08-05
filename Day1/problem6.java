@@ -24,6 +24,8 @@ class Solution {
             int min=interval[0];
             int max=interval[1];
             
+
+            //Overlapping using greedy
             while(i+1<intervals.length && intervals[i+1][0]<=max){
                 min=Math.min(min,intervals[i+1][0]);
                 max=Math.max(max,intervals[i+1][1]);

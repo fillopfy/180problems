@@ -9,6 +9,8 @@ one pass algorithm using two pointer
 
 class Solution {
     public void sortColors(int[] nums) {
+
+        //take two pointers and iterate
         int l=0,h=nums.length-1;
         for(int i=l;i<=h;){
             if(nums[i]==0){
