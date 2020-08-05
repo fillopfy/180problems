@@ -49,7 +49,6 @@ Divide and Conquer using merge Sort Algorithm
 
 */
 
-/*package whatever //do not write package name here */
 
 import java.util.*;
 import java.lang.*;

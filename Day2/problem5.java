@@ -52,7 +52,6 @@ class Solution {
             
             peak=prices[i];
             max+=peak-vall;
-            k++;
             
         }
         
