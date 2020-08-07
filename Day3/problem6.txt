@@ -1,0 +1,21 @@
+/*
+
+Puzzles from GFG: https://www.geeksforgeeks.org/puzzles/
+
+*/
+
+
+1. 	https://www.geeksforgeeks.org/puzzle-6-monty-hall-problem/
+
+	Monty Hall Problem:
+
+	Ans: Switch because effective probability increases on other door
+
+
+
+2.	https://www.geeksforgeeks.org/puzzle-7-3-bulbs-and-3-switches/
+	
+	3-bulbs 3-switches problem:
+
+	Ans: Light one bulb for 5-10min, switch it off, then switch another bulb. Go inside the room
+		 warmer bulb is first one, lighted bulb is second and normal one is third bulb switch
