@@ -1,57 +1,78 @@
 /*
 
-Problem Link: https://leetcode.com/problems/reverse-linked-list/
-Time: O(n)
+Problem Link: https://leetcode.com/problems/intersection-of-two-linked-lists/
+Time: O(n^2)
 Space: O(1)
-
-Iterative approach
+Brute force
 
 */
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
-
-
-class Solution {
-    public ListNode reverseList(ListNode head) {
-        if(head==null || head.next==null) return head;
-        
-        ListNode curr=head,  prev=null;
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode curr=headA, node=headB;
         while(curr!=null){
-            ListNode tem=curr.next;
-            curr.next=prev;
-            prev=curr;
-            curr=tem;
+            node=headB;
+            while(node!=null){
+                if(node==curr){
+                    return node;
+                }
+                node=node.next;
+            }
+            curr=curr.next;
         }
-        
-        return prev;
+        return null;
     }
 }
 
 
 /*
 
-Recursive approach
-Time: O(n)
+Using hashset: 
+Time: O(n+m)=linear
 Space: O(n)
 
 */
 
 
-public ListNode reverseList(ListNode head) {
-        if(head==null || head.next==null) return head;
+public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        HashSet<ListNode> set=new HashSet<>();
+        while(headA!=null){
+            set.add(headA);
+            headA=headA.next;
+        }
+        while(headB!=null){
+            if(set.contains(headB)){
+                return headB;
+            }
+            headB=headB.next;
+        }
         
-        ListNode prev=reverseList(head.next);
-        head.next.next=head;
-        head.next=null;
-        
-        return prev;
+        return null;
 }
+
+
+
+
+/*
+
+Using two pointers
+Time: O(n)
+Space: O(1)
+
+*/
+
+public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if(headA==null || headB==null) return null;
+        ListNode pA=headA,pB=headB;
+        
+        while(pA!=pB){
+           pA=pA==null?headB:pA.next;
+           pB=pB==null?headA:pB.next;
+        }
+        
+        return pA;
+}
+
+
+
+
